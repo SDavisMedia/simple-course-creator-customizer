@@ -13,7 +13,7 @@ Once activated, navigate to the WordPress Customizer and a new section titled "S
 
 All default styles will remain as they were when you install this add-on. Style changes only happen if you change the customizer settings.
 
-![Simple Course Creator Customizer](http://buildwpyourself.com/wp-content/uploads/2014/03/scc-customizer.png)
+![Simple Course Creator Customizer](http://buildwpyourself.com/wp-content/uploads/edd/2014/03/sccc-screenshot.png)
 
 ### Theme Overrides
 
