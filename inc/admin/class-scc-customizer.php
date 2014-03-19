@@ -160,8 +160,10 @@ class SCC_Customizer {
 			echo '#scc-wrap{';
 			
 				// course box border
-				if ( $scc_border_px == '0' ) :
+				if ( $scc_border_px == '0' && $scc_border_radius == '' ) :
 					echo "border:none;";
+				elseif ( $scc_border_px == '0' && $scc_border_radius != '' ) :
+					echo "border:none;border-radius:" . intval( $scc_border_radius ) . "px;";
 				else : 
 			
 					// border width
