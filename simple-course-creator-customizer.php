@@ -10,7 +10,7 @@
  * Requires at least: 3.8
  * Tested up to: 3.8
  * Text Domain: scc_customizer
- * Domain Path: /inc/languages/
+ * Domain Path: /languages/
  * 
  * This plugin is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2, as 
@@ -75,7 +75,7 @@ class Simple_Course_Creator_Customizer {
 	 * @since 1.0.0
 	 */
 	public function load_textdomain() {
-		load_plugin_textdomain( 'scc_customizer', false, SCCC_DIR . "inc/languages" );
+		load_plugin_textdomain( 'scc_customizer', false, SCCC_DIR . "languages" );
 	}
 	
 	
@@ -85,7 +85,7 @@ class Simple_Course_Creator_Customizer {
 	 * @since 1.0.0
 	 */
 	private function includes() {
-		require_once( SCCC_DIR . 'inc/admin/class-scc-customizer.php' );		// customizer class
+		require_once( SCCC_DIR . 'includes/admin/class-scc-customizer.php' );		// customizer class
 	}
 }
 new Simple_Course_Creator_Customizer();

@@ -18,7 +18,7 @@ class SCC_Customizer {
 		add_action( 'customize_register', array( $this, 'settings' ) );
 		
 		// customizer styles
-		add_action('customize_controls_print_styles', array( $this, 'customizer_styles' ) );
+		add_action( 'customize_controls_print_styles', array( $this, 'customizer_styles' ) );
 		
 		// add customizer styles to head
 		add_action( 'wp_head', array( $this, 'head_styles' ) );
