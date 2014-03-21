@@ -32,7 +32,6 @@
  * @category Customizer
  * @author Sean Davis
  * @license GNU GENERAL PUBLIC LICENSE Version 2 - /license.txt
- * @version 1.0.0
  */
 
 
@@ -54,6 +53,12 @@ class Simple_Course_Creator_Customizer {
 	 * @since 1.0.0
 	 */
 	public function __construct() {
+		
+		// define plugin name
+		define( 'SCCC_NAME', __( 'Simple Course Creator Customizer', 'scc' ) );
+		
+		// define plugin version
+		define( 'SCCC_VERSION', '1.0.0' );
 		
 		// define plugin directory
 		define( 'SCCC_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
