@@ -8,7 +8,7 @@ class SCC_Customizer {
 
 		
 	/**
-	 * Constructor for SCC_Customizer class
+	 * constructor for SCC_Customizer class
 	 *
 	 * @since 1.0.0
 	 */
@@ -25,13 +25,15 @@ class SCC_Customizer {
 	}
 
 
-	/** ===============
-	 * Simple Course Creator Design
+	/** 
+	 * add Simple Course Creator Design to customizer
+	 *
+	 * @since 1.0.0
 	 */
 	public function settings( $wp_customize ) {
 		if ( class_exists( 'Simple_Course_Creator' ) ) {
 		
-			// Color customization options
+			// color customization options
 			$colors = array();
 			
 			$wp_customize->add_section( 'scc_customizer', array(
@@ -102,7 +104,7 @@ class SCC_Customizer {
 				'priority'	=> 100
 			);
 			
-			// Build settings from $colors array
+			// build settings from $colors array
 			foreach( $colors as $color ) {
 		
 				// customizer settings

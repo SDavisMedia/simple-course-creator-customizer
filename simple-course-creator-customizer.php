@@ -24,10 +24,6 @@
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, see http://www.gnu.org/licenses/.
  *
- * The basic foundation of this plugin was highly influenced by Mike 
- * Jolley's WP Post Series plugin. Special thanks to him. Check out 
- * his website - http://mikejolley.com -
- *
  * @package Simple Course Creator
  * @category Customizer
  * @author Sean Davis
@@ -40,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 
 /**
- * Primary class for Simple Course Creator Customizer
+ * primary class for Simple Course Creator Customizer
  *
  * @since 1.0.0
  */
@@ -48,7 +44,7 @@ class Simple_Course_Creator_Customizer {
 
 		
 	/**
-	 * Constructor for Simple_Course_Creator_Customizer class
+	 * constructor for Simple_Course_Creator_Customizer class
 	 *
 	 * @since 1.0.0
 	 */
@@ -75,7 +71,7 @@ class Simple_Course_Creator_Customizer {
 	
 
 	/**
-	 * Load SCC Customizer textdomain
+	 * load SCC Customizer textdomain
 	 *
 	 * @since 1.0.0
 	 */
