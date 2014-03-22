@@ -61,3 +61,13 @@ You'd create a directory in the ROOT of your active theme called `scc_templates`
 Only use this method if you know your way around PHP, HTML, CSS, and JS.
 
 -- Lastly, for minimal display tweaks, simply write CSS in your active theme that overrides the default plugin CSS, which is minimal.
+
+== Screenshots ==
+
+1. customizer settings
+2. customized output
+
+== Changelog ==
+
+= 1.0.0 =
+* first stable version
