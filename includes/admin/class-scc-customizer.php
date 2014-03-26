@@ -217,6 +217,10 @@ class SCC_Customizer {
 			if ( $scc_link_hover_color ) :
 				echo "#scc-wrap a:hover{color:{$scc_link_hover_color};}";		
 			endif;
+			
+			// hook into head CSS (for other SCC plugins to use when 
+			// adding their own settings to the SCC customizer section)
+			do_action( 'scc_add_to_styles' );
 	
 		echo '</style>';
 	}
