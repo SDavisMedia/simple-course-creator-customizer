@@ -51,7 +51,7 @@ class SCC_Customizer {
 			$colors = array();
 			
 			$wp_customize->add_section( 'scc_customizer', array(
-		    	'title'       	=> __( 'Simple Course Creator Design', 'scc_customizer' ),
+		    	'title'       	=> 'Simple Course Creator ' . __( 'Design', 'scc_customizer' ),
 				'description' 	=> __( 'Customize the output of your SCC post listings. If you chose to override the output template in your theme <em>and change element classes</em>, your options may not work. Untouched options will remain as default styles. For <em>complete</em> customization control, write your own custom CSS.', 'scc_customizer' ),
 				'priority'   	=> 100,
 			) );
