@@ -29,10 +29,7 @@
  * @author Sean Davis
  * @license GNU GENERAL PUBLIC LICENSE Version 2 - /license.txt
  */
-
-
-// No accessing this file directly
-if ( ! defined( 'ABSPATH' ) ) exit;
+if ( ! defined( 'ABSPATH' ) ) exit; // No accessing this file directly
 
 
 /**
@@ -46,12 +43,13 @@ class Simple_Course_Creator_Customizer {
 	/**
 	 * constructor for Simple_Course_Creator_Customizer class
 	 *
-	 * @since 1.0.0
+	 * Set up the basic plugin environment and with definitions,
+	 * plugin information, and required plugin files.
 	 */
 	public function __construct() {
 		
 		// define plugin name
-		define( 'SCCC_NAME', __( 'Simple Course Creator Customizer', 'scc' ) );
+		define( 'SCCC_NAME', 'Simple Course Creator Customizer' );
 		
 		// define plugin version
 		define( 'SCCC_VERSION', '1.0.0' );
@@ -72,8 +70,6 @@ class Simple_Course_Creator_Customizer {
 
 	/**
 	 * load SCC Customizer textdomain
-	 *
-	 * @since 1.0.0
 	 */
 	public function load_textdomain() {
 		load_plugin_textdomain( 'scc_customizer', false, SCCC_DIR . "languages" );
@@ -82,8 +78,6 @@ class Simple_Course_Creator_Customizer {
 	
 	/**
 	 * require additional plugin files
-	 *
-	 * @since 1.0.0
 	 */
 	private function includes() {
 		require_once( SCCC_DIR . 'includes/admin/class-scc-customizer.php' );		// customizer class

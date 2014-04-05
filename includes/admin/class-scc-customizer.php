@@ -2,15 +2,29 @@
 /**
  * SCC_Customizer class
  *
+ * This class creates the customizer options for Simple Course Creator.
+ * It uses the classes baked into SCC's HTML to create style options.
+ *
+ * The customizer options will not show up in the customizer unless
+ * SCC is installed and activated.
+ *
+ * The style options use WordPress default customizer functionality and
+ * adds all the generated CSS to the <head> of the document.
+ *
+ * Conveniently placed in that <style> tag is a WordPress hook called
+ * "scc_add_to_styles" so that other plugins can add styles options to
+ * the customizer and hook into the same styles output by this plugin.
+ *
  * @since 1.0.0
  */
+if ( ! defined( 'ABSPATH' ) ) exit; // No accessing this file directly
+
+
 class SCC_Customizer {
 
 		
 	/**
 	 * constructor for SCC_Customizer class
-	 *
-	 * @since 1.0.0
 	 */
 	public function __construct() {
 	
@@ -26,9 +40,9 @@ class SCC_Customizer {
 
 
 	/** 
-	 * add Simple Course Creator Design to customizer
+	 * adds Simple Course Creator Design to customizer
 	 *
-	 * @since 1.0.0
+	 * Only add the options to the customizer if SCC is activated.
 	 */
 	public function settings( $wp_customize ) {
 		if ( class_exists( 'Simple_Course_Creator' ) ) {
@@ -127,9 +141,7 @@ class SCC_Customizer {
 	
 	
 	/**
-	 * styles for the customizer
-	 *
-	 * @since 1.0.0
+	 * styles for the customizer settings
 	 */
 	public function customizer_styles() { ?>
 		<style type="text/css">
@@ -146,7 +158,8 @@ class SCC_Customizer {
 	/**
 	 * add customizer styles to <head>
 	 *
-	 * @since 1.0.0
+	 * Also add the "scc_add_to_styles" hook for other plugins to
+	 * "hack" into the <style> tag output by this plugin.
 	 */
 	public function head_styles() {
 		$scc_border_px = get_theme_mod( 'scc_border_px' );
