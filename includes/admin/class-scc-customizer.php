@@ -62,7 +62,7 @@ class SCC_Customizer {
 			    'label' 	=> __( 'Border Width', 'sdm' ),
 			    'section' 	=> 'scc_customizer',
 				'settings' 	=> 'scc_border_px',
-				'priority'	=> 30,
+				'priority'	=> 1
 			) );
 			
 			// border radius
@@ -71,14 +71,14 @@ class SCC_Customizer {
 			    'label' 	=> __( 'Border Radius', 'sdm' ),
 			    'section' 	=> 'scc_customizer',
 				'settings' 	=> 'scc_border_radius',
-				'priority'	=> 40,
+				'priority'	=> 2
 			) );
 			
 			// border color
 			$colors[] = array(
 				'slug'		=>'scc_border_color', 
 				'label'		=> __( 'Border Color', 'scc_customizer' ),
-				'priority'	=> 50
+				'priority'	=> 3
 			);
 			
 			// padding in pixels
@@ -87,35 +87,35 @@ class SCC_Customizer {
 			    'label' 	=> __( 'Course Padding', 'sdm' ),
 			    'section' 	=> 'scc_customizer',
 				'settings' 	=> 'scc_padding_px',
-				'priority'	=> 60,
+				'priority'	=> 4
 			) );
 	
 			// background color
 			$colors[] = array(
 				'slug'		=>'scc_background', 
 				'label'		=> __( 'Background Color', 'scc_customizer' ),
-				'priority'	=> 70
+				'priority'	=> 5
 			);
 			
 			// text color
 			$colors[] = array(
 				'slug'		=>'scc_text_color', 
 				'label'		=> __( 'Text Color', 'scc_customizer' ),
-				'priority'	=> 80
+				'priority'	=> 6
 			);
 			
 			// link color
 			$colors[] = array(
 				'slug'		=>'scc_link_color', 
 				'label'		=> __( 'Link Color', 'scc_customizer' ),
-				'priority'	=> 90
+				'priority'	=> 7
 			);
 			
 			// link hover color
 			$colors[] = array(
 				'slug'		=>'scc_link_hover_color', 
 				'label'		=> __( 'Link Hover Color', 'scc_customizer' ),
-				'priority'	=> 100
+				'priority'	=> 8
 			);
 			
 			// build settings from $colors array
