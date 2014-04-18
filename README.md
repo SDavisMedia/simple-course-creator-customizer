@@ -1,6 +1,8 @@
 Simple Course Creator Customizer
 =====================
 
+View it on WordPress: (http://wordpress.org/plugins/simple-course-creator-customizer/)
+
 This is an add-on plugin for use with the [Simple Course Creator](https://github.com/sdavis2702/simple-course-creator) plugin.
 
 Simple Course Creator is designed to easily link posts together in a series and output that series list in the content of each included post.
