@@ -3,12 +3,12 @@
  * Plugin Name: SCC - Customizer
  * Plugin URI: http://buildwpyourself.com/downloads/scc-customizer/
  * Description: Customizer the Simple Course Creator output with the WordPress theme customizer
- * Version: 1.0.0
+ * Version: 1.0.2
  * Author: Sean Davis
  * Author URI: http://seandavis.co
  * License: GPL2
  * Requires at least: 3.8
- * Tested up to: 3.9
+ * Tested up to: 3.9.1
  * Text Domain: scc_customizer
  * Domain Path: /languages/
  * 
@@ -52,7 +52,7 @@ class Simple_Course_Creator_Customizer {
 		define( 'SCCC_NAME', 'Simple Course Creator Customizer' );
 		
 		// define plugin version
-		define( 'SCCC_VERSION', '1.0.0' );
+		define( 'SCCC_VERSION', '1.0.2' );
 		
 		// define plugin directory
 		define( 'SCCC_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
