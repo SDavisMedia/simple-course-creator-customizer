@@ -59,7 +59,7 @@ class SCC_Customizer {
 			// border pixels
 			$wp_customize->add_setting( 'scc_border_px', array( 'default' => '' ) );		
 			$wp_customize->add_control( 'scc_border_px', array(
-			    'label' 	=> __( 'Border Width', 'sdm' ),
+			    'label' 	=> __( 'Border Width', 'scc_customizer' ),
 			    'section' 	=> 'scc_customizer',
 				'settings' 	=> 'scc_border_px',
 				'priority'	=> 1
@@ -68,7 +68,7 @@ class SCC_Customizer {
 			// border radius
 			$wp_customize->add_setting( 'scc_border_radius', array( 'default' => '' ) );		
 			$wp_customize->add_control( 'scc_border_radius', array(
-			    'label' 	=> __( 'Border Radius', 'sdm' ),
+			    'label' 	=> __( 'Border Radius', 'scc_customizer' ),
 			    'section' 	=> 'scc_customizer',
 				'settings' 	=> 'scc_border_radius',
 				'priority'	=> 2
@@ -84,7 +84,7 @@ class SCC_Customizer {
 			// padding in pixels
 			$wp_customize->add_setting( 'scc_padding_px', array( 'default' => '' ) );		
 			$wp_customize->add_control( 'scc_padding_px', array(
-			    'label' 	=> __( 'Course Padding', 'sdm' ),
+			    'label' 	=> __( 'Course Padding', 'scc_customizer' ),
 			    'section' 	=> 'scc_customizer',
 				'settings' 	=> 'scc_padding_px',
 				'priority'	=> 4
