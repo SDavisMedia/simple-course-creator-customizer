@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // No accessing this file directly
  */
 class Simple_Course_Creator_Customizer {
 
-		
+
 	/**
 	 * constructor for Simple_Course_Creator_Customizer class
 	 *
@@ -47,26 +47,26 @@ class Simple_Course_Creator_Customizer {
 	 * plugin information, and required plugin files.
 	 */
 	public function __construct() {
-		
+
 		// define plugin name
 		define( 'SCCC_NAME', 'Simple Course Creator Customizer' );
-		
+
 		// define plugin version
 		define( 'SCCC_VERSION', '1.0.2' );
-		
+
 		// define plugin directory
 		define( 'SCCC_DIR', trailingslashit( plugin_dir_path( __FILE__ ) ) );
-		
+
 		// define plugin root file
 		define( 'SCCC_URL', trailingslashit( plugin_dir_url( __FILE__ ) ) );
 
 		// load text domain
 		add_action( 'init', array( $this, 'load_textdomain' ) );
-		
+
 		// require additional plugin files
 		$this->includes();
 	}
-	
+
 
 	/**
 	 * load SCC Customizer textdomain
@@ -74,13 +74,13 @@ class Simple_Course_Creator_Customizer {
 	public function load_textdomain() {
 		load_plugin_textdomain( 'scc_customizer', false, SCCC_DIR . 'languages/' );
 	}
-	
-	
+
+
 	/**
 	 * require additional plugin files
 	 */
 	private function includes() {
-		require_once( SCCC_DIR . 'includes/admin/class-scc-customizer.php' );		// customizer class
+		require_once( SCCC_DIR . 'includes/admin/class-scc-customizer.php' ); // customizer class
 	}
 }
 new Simple_Course_Creator_Customizer();
