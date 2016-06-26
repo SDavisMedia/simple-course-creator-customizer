@@ -3,8 +3,8 @@ Contributors: sdavis2702
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=52HQDSEUA542S
 Tags: customizer, series, course, lesson, taxonomy, sdavis2702
 Requires at least: 3.8
-Tested up to: 4.1
-Stable tag: 1.0.3
+Tested up to: 4.6
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -34,7 +34,7 @@ No. The Customizer options will not appear unless Simple Course Creator is insta
 
 The customizer options for SCC are very basic. For complete customization control, use SCC's built-in functionality.
 
-There are multiple ways to edit course output. 
+There are multiple ways to edit course output.
 
 -- The first and easiest way is to use the built-in hooks and filter to customize the course box. You'd write your actions in your active theme functions file.
 
@@ -58,7 +58,7 @@ The course display toggle link is also filtered. Use the following filter to cha
 
 -- The second way is to override the plugin display files in your active theme.
 
-You'd create a directory in the ROOT of your active theme called `scc_templates` and in it, copy any of the files from the `includes/scc_templates` directory of the plugin. Your new theme files will override the plugin files. 
+You'd create a directory in the ROOT of your active theme called `scc_templates` and in it, copy any of the files from the `includes/scc_templates` directory of the plugin. Your new theme files will override the plugin files.
 
 Only use this method if you know your way around PHP, HTML, CSS, and JS.
 
@@ -70,6 +70,9 @@ Only use this method if you know your way around PHP, HTML, CSS, and JS.
 2. customized output
 
 == Changelog ==
+
+= 1.0.4 =
+* Fixed: customizer PHP notices
 
 = 1.0.3 =
 * improved: removed white space
