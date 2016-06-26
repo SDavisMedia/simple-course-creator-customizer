@@ -51,80 +51,80 @@ class SCC_Customizer {
 			$colors = array();
 
 			$wp_customize->add_section( 'scc_customizer', array(
-		    	'title'       	=> 'Simple Course Creator ' . __( 'Design', 'scc_customizer' ),
-				'description' 	=> __( 'Customize the output of your SCC post listings. If you chose to override the output template in your theme <em>and change element classes</em>, your options may not work. Untouched options will remain as default styles. For <em>complete</em> customization control, write your own custom CSS.', 'scc_customizer' ),
-				'priority'   	=> 100,
+				'title'        => 'Simple Course Creator ' . __( 'Design', 'scc_customizer' ),
+				'description'  => __( 'Customize the output of your SCC post listings. If you chose to override the output template in your theme <em>and change element classes</em>, your options may not work. Untouched options will remain as default styles. For <em>complete</em> customization control, write your own custom CSS.', 'scc_customizer' ),
+				'priority'     => 100,
 			) );
 
 			// border pixels
 			$wp_customize->add_setting( 'scc_border_px', array(
-				'default'			=> '',
-				'sanitize_callback'	=> array( $this, 'scc_customizer_sanitize_integer' ),
+				'default'           => '',
+				'sanitize_callback' => array( $this, 'scc_customizer_sanitize_integer' ),
 			) );
 			$wp_customize->add_control( 'scc_border_px', array(
-			    'label' 	=> __( 'Border Width', 'scc_customizer' ),
-			    'section' 	=> 'scc_customizer',
-				'settings' 	=> 'scc_border_px',
-				'priority'	=> 1
+			    'label'     => __( 'Border Width', 'scc_customizer' ),
+			    'section'   => 'scc_customizer',
+				'settings'  => 'scc_border_px',
+				'priority'  => 1
 			) );
 
 			// border radius
 			$wp_customize->add_setting( 'scc_border_radius', array(
-				'default'			=> '',
-				'sanitize_callback'	=> array( $this, 'scc_customizer_sanitize_integer' ),
+				'default'           => '',
+				'sanitize_callback' => array( $this, 'scc_customizer_sanitize_integer' ),
 			) );
 			$wp_customize->add_control( 'scc_border_radius', array(
-			    'label' 	=> __( 'Border Radius', 'scc_customizer' ),
-			    'section' 	=> 'scc_customizer',
-				'settings' 	=> 'scc_border_radius',
-				'priority'	=> 2
+			    'label'     => __( 'Border Radius', 'scc_customizer' ),
+				'section'   => 'scc_customizer',
+				'settings'  => 'scc_border_radius',
+				'priority'  => 2
 			) );
 
 			// border color
 			$colors[] = array(
-				'slug'		=>'scc_border_color',
-				'label'		=> __( 'Border Color', 'scc_customizer' ),
-				'priority'	=> 3
+				'slug'      =>'scc_border_color',
+				'label'     => __( 'Border Color', 'scc_customizer' ),
+				'priority'  => 3
 			);
 
 			// padding in pixels
 			$wp_customize->add_setting( 'scc_padding_px', array(
-				'default'			=> '',
-				'sanitize_callback'	=> array( $this, 'scc_customizer_sanitize_integer' ),
+				'default'           => '',
+				'sanitize_callback' => array( $this, 'scc_customizer_sanitize_integer' ),
 			) );
 			$wp_customize->add_control( 'scc_padding_px', array(
-			    'label' 	=> __( 'Course Padding', 'scc_customizer' ),
-			    'section' 	=> 'scc_customizer',
-				'settings' 	=> 'scc_padding_px',
-				'priority'	=> 4
+				'label'     => __( 'Course Padding', 'scc_customizer' ),
+				'section'   => 'scc_customizer',
+				'settings'  => 'scc_padding_px',
+				'priority'  => 4
 			) );
 
 			// background color
 			$colors[] = array(
-				'slug'		=>'scc_background',
-				'label'		=> __( 'Background Color', 'scc_customizer' ),
-				'priority'	=> 5
+				'slug'      =>'scc_background',
+				'label'     => __( 'Background Color', 'scc_customizer' ),
+				'priority'  => 5
 			);
 
 			// text color
 			$colors[] = array(
-				'slug'		=>'scc_text_color',
-				'label'		=> __( 'Text Color', 'scc_customizer' ),
-				'priority'	=> 6
+				'slug'      =>'scc_text_color',
+				'label'     => __( 'Text Color', 'scc_customizer' ),
+				'priority'  => 6
 			);
 
 			// link color
 			$colors[] = array(
-				'slug'		=>'scc_link_color',
-				'label'		=> __( 'Link Color', 'scc_customizer' ),
-				'priority'	=> 7
+				'slug'      =>'scc_link_color',
+				'label'     => __( 'Link Color', 'scc_customizer' ),
+				'priority'  => 7
 			);
 
 			// link hover color
 			$colors[] = array(
-				'slug'		=>'scc_link_hover_color',
-				'label'		=> __( 'Link Hover Color', 'scc_customizer' ),
-				'priority'	=> 8
+				'slug'      =>'scc_link_hover_color',
+				'label'     => __( 'Link Hover Color', 'scc_customizer' ),
+				'priority'  => 8
 			);
 
 			// build settings from $colors array
@@ -132,16 +132,16 @@ class SCC_Customizer {
 
 				// customizer settings
 				$wp_customize->add_setting( $color['slug'], array(
-					'type'			=> 'option',
-					'capability'	=> 'edit_theme_options'
+					'type'        => 'option',
+					'capability'  => 'edit_theme_options'
 				) );
 
 				// customizer controls
 				$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $color['slug'], array(
-					'label'		=> $color['label'],
-					'section'	=> 'scc_customizer',
-					'settings'	=> $color['slug'],
-					'priority'	=> $color['priority']
+					'label'     => $color['label'],
+					'section'   => 'scc_customizer',
+					'settings'  => $color['slug'],
+					'priority'  => $color['priority']
 				) ) );
 			}
 		}
@@ -166,12 +166,12 @@ class SCC_Customizer {
 	public function scc_customizer_sanitize_hex_color( $color ) {
 		if ( '' === $color ) :
 			return '';
-	    endif;
+		endif;
 
 		// 3 or 6 hex digits, or the empty string.
 		if ( preg_match('|^#([A-Fa-f0-9]{3}){1,2}$|', $color ) ) :
 			return $color;
-	    endif;
+		endif;
 
 		return null;
 	}
@@ -199,14 +199,14 @@ class SCC_Customizer {
 	 * "hack" into the <style> tag output by this plugin.
 	 */
 	public function head_styles() {
-		$scc_border_px			= get_theme_mod( 'scc_border_px' );
-		$scc_border_radius		= get_theme_mod( 'scc_border_radius' );
-		$scc_border_color		= get_option( 'scc_border_color' );
-		$scc_padding_px			= get_theme_mod( 'scc_padding_px' );
-		$scc_bg_color			= get_option( 'scc_background' );
-		$scc_text_color			= get_option( 'scc_text_color' );
-		$scc_link_color			= get_option( 'scc_link_color' );
-		$scc_link_hover_color	= get_option( 'scc_link_hover_color' );
+		$scc_border_px         = get_theme_mod( 'scc_border_px' );
+		$scc_border_radius     = get_theme_mod( 'scc_border_radius' );
+		$scc_border_color      = get_option( 'scc_border_color' );
+		$scc_padding_px        = get_theme_mod( 'scc_padding_px' );
+		$scc_bg_color          = get_option( 'scc_background' );
+		$scc_text_color        = get_option( 'scc_text_color' );
+		$scc_link_color        = get_option( 'scc_link_color' );
+		$scc_link_hover_color  = get_option( 'scc_link_hover_color' );
 
 		echo '<style type="text/css">';
 			echo '#scc-wrap{';
@@ -265,7 +265,7 @@ class SCC_Customizer {
 				echo '#scc-wrap a{color:' . $this->scc_customizer_sanitize_hex_color( $scc_link_color ) . '}';
 			endif;
 
-			// course box link color
+			// course box link hover color
 			if ( $scc_link_hover_color ) :
 				echo '#scc-wrap a:hover{color:' . $this->scc_customizer_sanitize_hex_color( $scc_link_hover_color ) . '}';
 			endif;
