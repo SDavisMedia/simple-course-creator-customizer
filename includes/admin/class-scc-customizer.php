@@ -187,7 +187,7 @@ class SCC_Customizer {
 			#customize-control-scc_border_radius input[type="text"] { width: 50px; }
 			#customize-control-scc_padding_px label:after,
 			#customize-control-scc_border_px label:after,
-			#customize-control-scc_border_radius label:after { content: "px"; }
+			#customize-control-scc_border_radius label:after { content: " - px"; }
 		</style>
 	<?php }
 
@@ -259,6 +259,15 @@ class SCC_Customizer {
 				endif;
 
 			echo '}';
+
+			// full course toggle link position (no setting, just adjust based on setting use
+			if (
+				( ! empty( $scc_padding_px ) && '0' !== $scc_padding_px )
+				|| ( '' != $scc_border_px && '0' != $scc_border_px )
+				|| $scc_bg_color
+			) :
+				echo '#scc-wrap .scc-toggle-post-list{right:10px}';
+			endif;
 
 			// course box link color
 			if ( $scc_link_color ) :

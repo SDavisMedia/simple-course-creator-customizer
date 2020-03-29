@@ -3,8 +3,8 @@ Contributors: sdavis2702
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=52HQDSEUA542S
 Tags: customizer, series, course, lesson, taxonomy, sdavis2702
 Requires at least: 3.8
-Tested up to: 4.6
-Stable tag: 1.0.4
+Tested up to: 5.3
+Stable tag: 1.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -66,10 +66,12 @@ Only use this method if you know your way around PHP, HTML, CSS, and JS.
 
 == Screenshots ==
 
-1. customizer settings
-2. customized output
+1. customizer settings and preview
 
 == Changelog ==
+
+= 1.0.5 =
+* Fixed: updated default controls for compatibility with Simple Course Creator 1.0.7+
 
 = 1.0.4 =
 * Fixed: customizer PHP notices
